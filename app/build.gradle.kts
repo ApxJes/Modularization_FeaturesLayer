@@ -43,6 +43,10 @@ android {
 
 dependencies {
 
+    implementation(project(":news:news_presentation"))
+    implementation(project(":news:news_domain"))
+    implementation(project(":news:news_data"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -54,4 +58,13 @@ dependencies {
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.fragment)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.ktx)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
 }

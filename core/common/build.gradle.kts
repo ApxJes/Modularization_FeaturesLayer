@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.news_data"
+    namespace = "com.example.common"
     compileSdk = 35
 
     defaultConfig {
@@ -36,9 +36,6 @@ android {
 
 dependencies {
 
-    implementation(project(":news:news_domain"))
-    implementation(project(":core:common"))
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -46,10 +43,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.fragment)
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp.logging.interceptor)
