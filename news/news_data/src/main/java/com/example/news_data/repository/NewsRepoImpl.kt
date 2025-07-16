@@ -7,8 +7,9 @@ import com.example.news_domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
-class NewsRepoImpl(
+class NewsRepoImpl @Inject constructor(
     private val newsApiService: NewsApiService
 ) : NewsRepository {
     override suspend fun getNewsArticle(): Flow<List<Article>> = flow {
